@@ -25,6 +25,7 @@ CREATE TABLE employees (
     FOREIGN KEY(managerId) REFERENCES employees(id)
 );
 
+USE employees_db;
 
 INSERT INTO department
     (name)
