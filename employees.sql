@@ -24,3 +24,36 @@ CREATE TABLE employees (
     FOREIGN KEY(roleId) REFERENCES roles(id),
     FOREIGN KEY(managerId) REFERENCES employees(id)
 );
+
+
+INSERT INTO department
+    (name)
+VALUES
+    ('Sales'),
+    ('Engineering'),
+    ('Finance'),
+    ('Legal');
+
+INSERT INTO role
+    (title, salary, departmentId)
+VALUES
+    ('Sales Lead', 100000, 1),
+    ('Salesperson', 80000, 1),
+    ('Lead Engineer', 150000, 2),
+    ('Software Engineer', 120000, 2),
+    ('Account Manager', 160000, 3),
+    ('Accountant', 125000, 3),
+    ('Legal Team Lead', 250000, 4),
+    ('Lawyer', 190000, 4);
+
+INSERT INTO employee
+    (firstName, lastName, roleId, managerId)
+VALUES
+    ('Joseph', 'Wong', 1, NULL),
+    ('Daniel', 'Rodriquez', 2, 1),
+    ('Tami', 'Wong', 3, NULL),
+    ('Linda', 'Wong', 4, 3),
+    ('Joseph', 'Ludwicak', 5, NULL),
+    ('Rick', 'perez', 6, 5),
+    ('Joe', 'Medina', 7, NULL),
+    ('Laurie', 'Medina', 8, 7);
